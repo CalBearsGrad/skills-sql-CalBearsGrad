@@ -1,0 +1,135 @@
+(lp0
+ccopy_reg
+_reconstructor
+p1
+(c__main__
+Problem
+p2
+c__builtin__
+object
+p3
+Ntp4
+Rp5
+(dp6
+S'task'
+p7
+S"Balloonicorn's Cupcake shop is getting ready to send a marketing\nemail announcing a new promotion on Funfetti cupcakes. We need to get all of\nour customers' email addresses to Marketing.\n \nSelect all of the email addresses from the Customers table in alphabetical order.\n\nThe result set should be:\n        email        \n---------------------\n aperson@hotmail.com\n bpersonne@yahoo.com\n jdoe@gmail.com\n\n"
+p8
+sS'hint'
+p9
+S'Use an ORDER BY here.'
+p10
+sS'instruction'
+p11
+S''
+p12
+sS'solution'
+p13
+NsS'num'
+p14
+I1
+sS'solution_hash'
+p15
+S'd2730882200a2403d376226b5766f3a0'
+p16
+sbag1
+(g2
+g3
+Ntp17
+Rp18
+(dp19
+g7
+S'Jane Doe has requested receipts for all of her past cupcake orders.\nTo look up the receipts, we need to know which orders Jane placed.\n \nWrite a query that lists the order ids for all orders placed by customers with\nthe first name Jane and last name Doe. Use a SUBQUERY to do this, not a join.\n\nThe result set should be:\n id \n----\n  1\n  3\n  4\n  6\n  8\n(5 rows)\n'
+p20
+sg9
+S'What is the id for the customer with the name Jane Doe? Use that to\nfind cupcake orders from that customer.'
+p21
+sg11
+g12
+sg13
+Nsg14
+I2
+sg15
+S'7af83a0d6c27cd8639e6584fcf2b922c'
+p22
+sbag1
+(g2
+g3
+Ntp23
+Rp24
+(dp25
+g7
+S'Balloonicorn needs to schedule her employees for the next week\nbased on how many cupcakes have been ordered and not yet processed.\n \nWrite a query that gets the total number of cupcakes from unprocessed orders.\n\nThe result set should be:\n sum \n-----\n 209\n (1 row)\n '
+p26
+sg9
+S'The processed field would be FALSE if an order is unprocessed.'
+p27
+sg11
+g12
+sg13
+Nsg14
+I3
+sg15
+S'e108d4e9438dac321a2eec2703bbe59b'
+p28
+sbag1
+(g2
+g3
+Ntp29
+Rp30
+(dp31
+g7
+S'Balloonicorn is working on her inventory and wants to know how many\ncupcakes have been ordered of each type.\n \nWrite a query that shows the name of each cupcake and the sum of cupcakes\nordered for that cupcake type (for both processed and unprocessed orders).\nThe report should show all cupcake types, even if they have not been ordered\nat all.\n\nThe result set should be:\n    name     | sum \n-------------+-----\n funfetti    |  13\n carrot cake |  10\n red velvet  | 215\n raspberry   |  25\n chocolate   |    \n vanilla     | 202\n(6 rows)\n'
+p32
+sg9
+S'Use a LEFT JOIN and a GROUP BY.'
+p33
+sg11
+g12
+sg13
+Nsg14
+I4
+sg15
+S'd041702c8bf20f5389ed8d1c6d13e4b0'
+p34
+sbag1
+(g2
+g3
+Ntp35
+Rp36
+(dp37
+g7
+S'Marketing now wants to send emails to all of our top customers\nthanking them for their business.\n \nWrite a query that gets the email address of all customers who have ordered\nmore than 100 cupcakes total (from both processed and unprocessed orders).\n\nThe result set should be:\n        email        \n---------------------\n jdoe@gmail.com\n bpersonne@yahoo.com\n(2 rows)\n'
+p38
+sg9
+S'Use GROUP BY and HAVING.'
+p39
+sg11
+g12
+sg13
+Nsg14
+I5
+sg15
+S'd8d552fdf46ef794e5d9ee8989f9fa59'
+p40
+sbag1
+(g2
+g3
+Ntp41
+Rp42
+(dp43
+g7
+S'Uh oh -- it looks like there might have been an issue with a recent\nbatch of funfetti cupcakes (someone might have ordered non-edible sparkles\nto put in the icing instead of edible ones). We need to let our customers\nwho have processed orders of funfetti cupcakes know about the issue.\n \nWrite a query that selects the first name, last name and email address of\ncustomers who have processed orders of funfetti cupcakes. Even if a customer\nhas multiple outstanding orders of funfetti, their email should only appear once.\n\nThe result set should be:\n fname |  lname   |        email        \n-------+----------+---------------------\n Bob   | Personne | bpersonne@yahoo.com\n(1 row)\n'
+p44
+sg9
+S'Depending on how you write your query, you can use a GROUP BY, DISTINCT,\nor a subquery to make sure you only get each customer who should be notified once.'
+p45
+sg11
+g12
+sg13
+Nsg14
+I6
+sg15
+S'ebff584821683d27686d05f9718dd840'
+p46
+sba.
